@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination Example</title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body>
+    <h1 id="title">Pagination Example</h1>
+    <p id="description">A simple pagination example displaying data from a JSON source.</p>
+    <div class="table-responsive">
+        <table class="table table-bordered" id="data-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="data-container"></tbody>
+        </table>
+    </div>
+    <ul class="pagination">
+        <li><button id="first" onclick="goToPage(1)">First</button></li>
+        <li><button id="prev" onclick="prevPage()">Previous</button></li>
+        <div id="page-buttons"></div>
+        <li><button id="next" onclick="nextPage()">Next</button></li>
+        <li><button id="last" onclick="goToPage(Math.ceil(data.length / itemsPerPage))">Last</button></li>
+    </ul>
+
+    <script src="/script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
